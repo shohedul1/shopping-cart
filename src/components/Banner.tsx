@@ -14,7 +14,7 @@ const Banner = () => {
     const NextArrow = (props:any)=>{
         const {onClick} = props;
         return (
-            <div className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute left-5 top-1/2"
+            <div className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute left-2 top-1/2"
             onClick={onClick}>
                 <PiCaretLeft/>
             </div>
@@ -23,7 +23,7 @@ const Banner = () => {
     const PrevArrow = (props:any)=>{
         const {onClick} = props;
         return (
-            <div className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute right-5 top-1/2"
+            <div className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute right-2 top-1/2"
             onClick={onClick}>
                 <PiCaretRight/>
             </div>
@@ -45,23 +45,21 @@ const Banner = () => {
             <Slider {...settings}>
                 <div className="w-full h-full relative">
                     <Image src={image1} alt="image1"
-                    className="w-full h-[520px] relative"/>
+                    className="w-full h-[550px] relative"/>
                  <BannerText title="Outware Picks"/>
                 </div>
                 <div className="w-full h-full relative">
                     <Image src={image2} alt="image1"
-                    className="w-full h-[520px] relative"/>
+                    className="w-full h-[550px] relative"/>
                  <BannerText title="Seasonal Offers"/>
                 </div>
                 <div>
                     <Image src={image3} alt="image3"
-                    className="w-full  h-[520px] relative"/>
+                    className="w-full  h-[550px] relative"/>
                      <BannerText title="Best for men"/>
-                </div>
-
-                
-               
+                </div>   
             </Slider>
+            <div className="absolute w-full h-44 bg-gradient-to-t from-gray-100 to-transparent bottom-0 z-10"></div>
         </div>
     )
 }
