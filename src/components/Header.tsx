@@ -7,6 +7,7 @@ import { FiSearch } from "react-icons/fi";
 import { CiUser } from "react-icons/ci";
 import { useSession,signIn,signOut } from 'next-auth/react';
 import { FiLogOut } from "react-icons/fi";
+import Image from 'next/image';
 
 
 
@@ -43,6 +44,15 @@ const Header = () => {
                     0
                 </span>
             </div>
+            {/* {user Image} */}
+            {
+                session && <Image 
+                src= {session?.user?.image as string} 
+                alt='user image'
+                 width={50} 
+                 height={50}
+                 className='rounded-full object-cover'/>
+            }
             {/* logout button */}
            {session && (
              <div 
