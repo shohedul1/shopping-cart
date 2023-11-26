@@ -15,5 +15,8 @@
      .cartSpan{
         @apply bg-white text-orange-600 rounded-full text-xs font-semibold absolute -right-2 -top-1 w-5 h-5 flex items-center justify-center shadow-xl shadow-black;
      }
+     .socialLink{
+      @apply bg-slate-100 text-darkText p-1 inline-flex items-center justify-center rounded-md text-lg hover:bg-orange-600 hover:text-white cursor-pointer duration-200
+     }
 
 }
