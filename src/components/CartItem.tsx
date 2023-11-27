@@ -40,7 +40,7 @@ const CartItem = () => {
                                 <div className="flex items-center text-lg w-20 justify-between">
                                     <span onClick={()=> dispatch(decreaseQuantity(item))}
                                     className="cursor-pointer">
-                                        <FaAngleLeft />
+                                      <FaAngleLeft />
                                     </span>
                                     <span>{item?.quantity}</span>
                                     <span onClick={()=> dispatch(increaseQuantity(item))}
