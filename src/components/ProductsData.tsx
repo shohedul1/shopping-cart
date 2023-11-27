@@ -5,8 +5,13 @@ import { calculatePercentage } from '@/helpers';
 import FormattedPrice from './FormattedPrice';
 import { IoStar } from "react-icons/io5";
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import toast,{Toaster} from 'react-hot-toast';
+import { addToCart } from '@/redux/shoppingSlice';
+
 
 const ProductsData = ({ item }: ItemProps) => {
+    const dispatch = useDispatch();
     const startArray = Array.from({ length: item?.rating }, (_, index) => (
         <span key={index} className='text-yellow-400'>
             <IoStar />
@@ -40,12 +45,16 @@ const ProductsData = ({ item }: ItemProps) => {
                     </div>
                     <div className='flex items-center justify-between'>
                         {/* add to cart button */}
-                        <button className='bg-orange-600 px-4 py-2 text-sm tracking-wide rounded-full text-slate-100 hover:bg-orange-800 hover:text-white duration-200'>add to cart</button>
+                        <button onClick={()=> dispatch(addToCart(item)) && toast.success(
+                            `${item?.title.substring(0,15)} added successfully!`
+                        )}
+                        className='bg-orange-600 px-4 py-2 text-sm tracking-wide rounded-full text-slate-100 hover:bg-orange-800 hover:text-white duration-200'>add to cart</button>
                         {/* star icons */}
                         <div className='flex items-center gap-x-1'>{startArray}</div>
                     </div>
                 </div>
             </div>
+            <Toaster/>
         </div>
     )
 }
