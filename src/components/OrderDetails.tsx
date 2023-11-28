@@ -7,7 +7,7 @@ import FormattedPrice from './FormattedPrice';
 import { resetOrder } from '@/redux/shoppingSlice';
 import Link from "next/link";
 
-const orderDetails = () => {
+const OrderDetails = () => {
     const dispatch = useDispatch();
     const { orderData } = useSelector((state: StateProps) => state?.shopping);
     console.log(orderData);
@@ -83,4 +83,4 @@ const orderDetails = () => {
     )
 }
 
-export default orderDetails
+export default OrderDetails;
