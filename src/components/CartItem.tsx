@@ -31,8 +31,12 @@ const CartItem = () => {
                                 className="text-lg hover:text-red-600 cursor-pointer duration-200">
                                     <AiOutlineClose />
                                 </span>
-                                <Image src={item?.image} width={500} height={500} alt="product image" priority
-                                    className="w-20 h-20 object-cover" />
+                                <Image 
+                                src={item?.image} 
+                                width={500} height={500} 
+                                alt="product image" 
+                                className="w-20 h-20 object-cover"
+                                loading="lazy" />
                             </div>
                             {/* quantity */}
                             <div className="flex items-center justify-start gap-x-3 border-[1px] border-slate-300 py-2 px-4 w-full md:w-auto">

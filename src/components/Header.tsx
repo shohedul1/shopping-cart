@@ -22,8 +22,8 @@ const Header = () => {
     const dispatch = useDispatch();
     const { data: session } = useSession();
     // console.log(session);
-    const { productData } = useSelector((state: StateProps) => state.shopping);
-
+    const { productData, orderData } = useSelector((state: StateProps) => state.shopping);
+    console.log(orderData);
     useEffect(()=>{
         if(session){
             dispatch(
